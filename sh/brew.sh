@@ -1,60 +1,60 @@
 #!/usr/bin/env bash
 
+###############################################################################
+# Install Xcode command line tools
+###############################################################################
+echo "Installing Xcode Command Line Tools..."
+xcode-select --install
+
+###############################################################################
+# Check for Homebrew, else install
+###############################################################################
+echo "Checking for, or Installing Homebrew..."
+if [ -z `command -v brew` ]; then
+    echo "Brew is missing! Installing it..."
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi;
+
 # Install command-line tools using Homebrew.
 
 # Make sure we’re using the latest Homebrew.
+echo "Homebrew: updating..."
 brew update
 
 # Upgrade any already-installed formulae.
+echo "Homebrew: upgrading..."
 brew upgrade --all
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+echo "Homebrew: installing utilities..."
 brew install coreutils
 ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
-
 # Install some other useful utilities like `sponge`.
 brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
-# Install Bash 4.
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# running `chsh`.
-brew install bash
-brew tap homebrew/versions
-brew install bash-completion2
-
-# Switch to using brew-installed bash as default shell
-if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
-  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
-  chsh -s /usr/local/bin/bash;
-fi;
-
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
-# Install RingoJS and Narwhal.
-# Note that the order in which these are installed is important;
-# see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
-
 # Install more recent versions of some macOS tools.
+echo "Homebrew: installing some macOS tools..."
 brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php56 --with-gmp
 
 # Install font tools.
+echo "Homebrew: installing font tools..."
 brew tap bramstein/webfonttools
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
+echo "Homebrew: installing CTF tools..."
 brew install aircrack-ng
 brew install bfg
 brew install binutils
@@ -81,6 +81,7 @@ brew install xpdf
 brew install xz
 
 # Install other useful binaries.
+echo "Homebrew: installing some useful binaries..."
 brew install ack
 brew install dark-mode
 #brew install exiv2
@@ -103,4 +104,5 @@ brew install webkit2png
 brew install zopfli
 
 # Remove outdated versions from the cellar.
+echo "Homebrew: cleaning up..."
 brew cleanup
