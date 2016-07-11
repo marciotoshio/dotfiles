@@ -36,6 +36,7 @@ brew cask install alfred
 brew cask install atom
 brew cask install dropbox
 brew cask install evernote
+brew cask install filezilla
 brew cask install flux
 brew cask install google-chrome
 brew cask install google-drive
