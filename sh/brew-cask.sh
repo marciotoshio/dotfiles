@@ -54,6 +54,7 @@ brew cask install steam
 brew cask install sublime-text
 brew cask install sequel-pro
 brew cask install transmission
+brew cask install vagrant
 brew cask install virtualbox
 
 ###############################################################################
