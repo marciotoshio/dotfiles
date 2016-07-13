@@ -102,7 +102,13 @@ brew install tree
 brew install vbindiff
 brew install webkit2png
 brew install zopfli
+brew install zsh
+
+echo "Setting zsh as default shell"
+chsh -s $(which zsh)
 
 # Remove outdated versions from the cellar.
 echo "Homebrew: cleaning up..."
 brew cleanup
+
+echo "Please restart your shell."
