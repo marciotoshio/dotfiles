@@ -22,7 +22,8 @@ function doIt() {
   ###############################################################################
 
   # Install Sublime Text settings
-  cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
+  echo "Copying Sublime preferences"
+  cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/ 2> /dev/null
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
