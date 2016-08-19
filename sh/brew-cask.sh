@@ -55,8 +55,9 @@ brew cask install steam
 brew cask install sublime-text
 brew cask install sequel-pro
 brew cask install transmission
+#Virtualbox needs to be v4.3 to works with vagrant
+#brew cask install virtualbox
 brew cask install vagrant
-brew cask install virtualbox
 
 ###############################################################################
 # Launch apps from Alfred

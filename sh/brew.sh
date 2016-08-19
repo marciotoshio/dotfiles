@@ -102,7 +102,22 @@ brew install tree
 brew install vbindiff
 brew install webkit2png
 brew install zopfli
+brew install zsh
+
+echo "Setting zsh as default shell"
+chsh -s $(which zsh)
+
+#Install RVM and Ruby
+# Install GPG
+brew install gpg
+# RVM key
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+#Install RVM with latest ruby
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+
 
 # Remove outdated versions from the cellar.
 echo "Homebrew: cleaning up..."
 brew cleanup
+
+echo "Please restart your shell."

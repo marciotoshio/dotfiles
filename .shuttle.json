@@ -5,6 +5,7 @@
 		"For more information on how to configure, please see http://fitztrev.github.io/shuttle/"
 	],
 	"terminal": "Terminal.app",
+	"default_theme": "Homebrew",
 	"launch_at_login": false,
 	"show_ssh_config_hosts": true,
 	"ssh_config_ignore_hosts": [],
