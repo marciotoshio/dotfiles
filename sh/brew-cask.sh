@@ -32,14 +32,14 @@ brew cask install ${fonts[@]}
 # Install applications with Homebrew Cask
 ###############################################################################
 echo "Homebrew Cask: installing apps..."
-brew cask install alfred
-brew cask install atom
+#brew cask install alfred
+#brew cask install atom
 brew cask install dropbox
 brew cask install evernote
 brew cask install filezilla
 brew cask install flux
-brew cask install google-chrome
-brew cask install google-drive
+#brew cask install google-chrome
+#brew cask install google-drive
 brew cask install imageoptim
 brew cask install java
 brew cask install kdiff3
@@ -50,14 +50,15 @@ brew cask install shuttle
 brew cask install skype
 brew cask install slack
 brew cask install spectacle
-brew cask install spotify
+#brew cask install spotify
 brew cask install steam
 brew cask install sublime-text
 brew cask install sequel-pro
-brew cask install transmission
+#brew cask install transmission
 #Virtualbox needs to be v4.3 to works with vagrant
-#brew cask install virtualbox
+brew cask install virtualbox
 brew cask install vagrant
+brew cask install docker
 
 ###############################################################################
 # Launch apps from Alfred
