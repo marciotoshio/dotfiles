@@ -1,0 +1,7 @@
+// These settings override both User and Default settings for the Markdown syntax
+{
+  "spell_check":true,
+  "rulers": [80],
+  "word_wrap": true,
+  "wrap_width": 80
+}
