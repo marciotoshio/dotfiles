@@ -12,7 +12,6 @@
 ###############################################################################
 echo "Homebrew: installing Homebrew Cask..."
 brew install caskroom/cask/brew-cask # install Cask
-# brew tap caskroom/versions # install beta versions with Cask
 brew tap caskroom/fonts # install fonts with Cask
 
 
@@ -32,47 +31,19 @@ brew cask install ${fonts[@]}
 # Install applications with Homebrew Cask
 ###############################################################################
 echo "Homebrew Cask: installing apps..."
-#brew cask install alfred
-#brew cask install atom
 brew cask install dropbox
 brew cask install evernote
 brew cask install filezilla
-brew cask install flux
-#brew cask install google-chrome
-#brew cask install google-drive
-brew cask install imageoptim
+brew cask install google-drive
 brew cask install java
 brew cask install kdiff3
 brew cask install obs
 brew cask install postman
 brew cask install remote-play
-brew cask install shuttle
 brew cask install skype
-brew cask install slack
-brew cask install spectacle
-#brew cask install spotify
 brew cask install steam
 brew cask install sublime-text
-brew cask install sequel-pro
-#brew cask install transmission
-#Virtualbox needs to be v4.3 to works with vagrant
-brew cask install virtualbox
-brew cask install vagrant
 brew cask install docker
-
-###############################################################################
-# Launch apps from Alfred
-###############################################################################
-# echo "Homebrew Cask: linking apps to Alfred..."
-# brew cask alfred link
-
-
-###############################################################################
-# Copy application preferences & config files with Mackup
-###############################################################################
-# echo "Mackup: restoring application preferences..."
-# mackup restore
-
 
 ###############################################################################
 # Cleanup

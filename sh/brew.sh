@@ -66,7 +66,7 @@ brew install woff2
 #brew install foremost
 #brew install hashpump
 #brew install hydra
-#brew install john
+//';#brew install john
 #brew install knock
 #brew install netpbm
 #brew install nmap
