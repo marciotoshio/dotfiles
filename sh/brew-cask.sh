@@ -31,19 +31,16 @@ brew cask install ${fonts[@]}
 # Install applications with Homebrew Cask
 ###############################################################################
 echo "Homebrew Cask: installing apps..."
-brew cask install dropbox
-brew cask install evernote
-brew cask install filezilla
 brew cask install google-drive
 brew cask install java
 brew cask install kdiff3
 brew cask install obs
 brew cask install postman
 brew cask install remote-play
-brew cask install skype
 brew cask install steam
 brew cask install sublime-text
 brew cask install docker
+brew cask install hyper
 
 ###############################################################################
 # Cleanup
