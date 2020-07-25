@@ -1,37 +1,59 @@
 {
-  "default_encoding": "UTF-8",
-  "default_line_ending": "unix",
-  "detect_indentation": false,
-  "draw_white_space": "all",
-  "ensure_newline_at_eof_on_save": true,
-  "file_exclude_patterns":
-  [
-    ".DS_Store",
-    "Desktop.ini",
-    "*.pyc",
-    "._*",
-    "Thumbs.db",
-    ".Spotlight-V100",
-    ".Trashes"
-  ],
-  "folder_exclude_patterns":
-  [
-    ".git",
-    "node_modules"
-  ],
-  "font_face": "Monaco",
-  "font_size": 16,
-  "highlight_modified_tabs": true,
-  "hot_exit": false,
-  "match_brackets": true,
-  "match_brackets_angle": true,
-  "remember_open_files": false,
-  "show_encoding": true,
-  "show_line_endings": true,
-  "tab_size": 2,
-  "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": true,
-  "word_wrap": true,
-  "wrap_width": 80,
-  "rulers": [80]
+	"added_words":
+	[
+		"workflow",
+		"iptables",
+		"Gluster",
+		"filesystem",
+		"az"
+	],
+	"binary_file_patterns":
+	[
+		"*/build/*",
+		"*build-us-east-1*",
+		"*/vendor/bundle/*",
+		".byebug_history"
+	],
+	"default_encoding": "UTF-8",
+	"default_line_ending": "unix",
+	"detect_indentation": false,
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".phpunit.result.cache",
+		"*.so"
+	],
+	"folder_exclude_patterns":
+	[
+		".git",
+		".local_aq",
+		"build",
+		"log",
+		"node_modules",
+		"pkg",
+		"vendor",
+		"build-us-east-1"
+	],
+	"font_face": "Monaco",
+	"font_size": 16,
+	"highlight_modified_tabs": true,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"match_brackets": true,
+	"match_brackets_angle": true,
+	"remember_open_files": false,
+	"rulers":
+	[
+		80
+	],
+	"show_encoding": true,
+	"show_line_endings": true,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true
 }
