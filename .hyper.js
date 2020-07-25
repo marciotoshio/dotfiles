@@ -152,7 +152,9 @@ module.exports = {
     "hyper-pane",
     "hyper-search",
     "hyper-highlight-active-pane",
-    "hyperline"
+    "hyperline",
+    "hyperborder",
+    "hyperterm-close-on-left"
   ],
 
   // in development, you can create a directory under
