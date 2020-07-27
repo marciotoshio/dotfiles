@@ -138,6 +138,15 @@ module.exports = {
     webGLRenderer: true,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+
+    hyperline: {
+      plugins: [
+        "ip", "cpu", "memory", "network", "battery"
+      ]
+    },
+    hypercwd: {
+      initialWorkingDirectory: '~/projects'
+    }
   },
 
   // a list of plugins to fetch and install from npm
