@@ -5,6 +5,21 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
+  if [ -d ~/.rvm ]; then
+    echo "RVM installed"
+  else
+      echo "Installing RVM"
+      gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+      \curl -sSL https://get.rvm.io | bash
+  fi;
+
+  if [ -d ~/.oh-my-zsh ]; then
+      echo "Oh My Zsh installed"
+  else
+      echo "Installing Oh My Zsh"
+      sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  fi;
+
   rsync --exclude ".git/" \
     --exclude "init/" \
     --exclude "sh/" \
@@ -15,7 +30,7 @@ function doIt() {
     --exclude "LICENSE-MIT.txt" \
     -avh --no-perms . ~;
 
-  source ~/.profile;
+  source ~/.zshrc;
 
   ###############################################################################
   # Sublime Text                                                                #

@@ -12,7 +12,7 @@ xcode-select --install
 echo "Checking for, or Installing Homebrew..."
 if [ -z `command -v brew` ]; then
     echo "Brew is missing! Installing it..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi;
 
 # Install command-line tools using Homebrew.
@@ -41,10 +41,9 @@ brew install wget --with-iri
 
 # Install more recent versions of some macOS tools.
 echo "Homebrew: installing some macOS tools..."
-brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
+brew install homebrew/grep
+brew install homebrew/openssh
+brew install homebrew/screen
 
 # Install font tools.
 echo "Homebrew: installing font tools..."
@@ -66,7 +65,7 @@ brew install woff2
 #brew install foremost
 #brew install hashpump
 #brew install hydra
-//';#brew install john
+#brew install john
 #brew install knock
 #brew install netpbm
 #brew install nmap

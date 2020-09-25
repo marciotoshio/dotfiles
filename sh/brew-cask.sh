@@ -11,8 +11,8 @@
 # Install fonts and applications with Homebrew cask
 ###############################################################################
 echo "Homebrew: installing Homebrew Cask..."
-brew install caskroom/cask/brew-cask # install Cask
-brew tap caskroom/fonts # install fonts with Cask
+brew install svn
+brew tap homebrew/cask-fonts # install fonts with Cask
 
 
 ###############################################################################
@@ -31,12 +31,10 @@ brew cask install ${fonts[@]}
 # Install applications with Homebrew Cask
 ###############################################################################
 echo "Homebrew Cask: installing apps..."
-brew cask install google-drive
-brew cask install java
+brew cask install google-backup-and-sync
 brew cask install kdiff3
 brew cask install obs
 brew cask install postman
-brew cask install remote-play
 brew cask install steam
 brew cask install sublime-text
 brew cask install docker
@@ -45,5 +43,5 @@ brew cask install hyper
 ###############################################################################
 # Cleanup
 ###############################################################################
-brew cask cleanup
+brew cleanup
 echo "macOS Apps Done Setup!"
