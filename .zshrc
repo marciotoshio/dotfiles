@@ -98,7 +98,7 @@ unset file;
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptin
 
 export HISTCONTROL='ignoreboth:erasedups'
-export HISTIGNORE="&:ls:cd:mkdir:cat:mv:cp:rm:exit:pwd:clear:history:[ \t]*"
+export HISTIGNORE="&:ls:cd:mkdir:cat:mv:cp:rm:exit:pwd:touch:clear:g* checkout:g* branch:source:history:[ \t]*"
 
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 

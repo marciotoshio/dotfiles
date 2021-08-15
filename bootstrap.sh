@@ -34,7 +34,7 @@ function doIt() {
 
   # link .zsh_history from Google Drive
   SOURCE_FILE=~/Google\ Drive/Settings/.zsh_history
-  LINK_NAME=/Users/tosha/.zsh_history
+  LINK_NAME=~/.zsh_history
 
   if [[ -f "$SOURCE_FILE" ]]; then
       rm -f $LINK_NAME
@@ -61,7 +61,7 @@ function doIt() {
 if [ "$1" = "--force" -o "$1" = "-f" ]; then
   doIt;
 else
-  read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
+  read "REPLY?This may overwrite existing files in your home directory. Are you sure? (y/n) "
   echo "";
   if [[ $REPLY =~ ^[Yy]$ ]]; then
     doIt;
