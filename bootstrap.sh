@@ -58,7 +58,7 @@ function doIt() {
   cp -r init/Markdown.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/ 2> /dev/null
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
+if [ "$1" = "--force" -o "$1" = "-f" ]; then
   doIt;
 else
   read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
