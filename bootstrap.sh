@@ -1,10 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 set -e
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-git pull origin master;
+git pull origin main;
 
 function doIt() {
   if [ -d ~/.rvm ]; then

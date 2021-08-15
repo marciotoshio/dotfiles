@@ -53,7 +53,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -96,6 +96,9 @@ done;
 unset file;
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptin
+
+export HISTCONTROL='ignoreboth:erasedups'
+export HISTIGNORE="&:ls:cd:mkdir:cat:mv:cp:rm:exit:pwd:clear:history:[ \t]*"
 
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
