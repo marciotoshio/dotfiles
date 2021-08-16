@@ -95,8 +95,6 @@ for file in ~/.{path,exports,aliases,functions,extra}; do
 done;
 unset file;
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptin
-
 export HISTCONTROL='ignoreboth:erasedups'
 export HISTIGNORE="&:ls:cd:mkdir:cat:mv:cp:rm:exit:pwd:touch:clear:g* checkout:g* branch:source:history:[ \t]*"
 
