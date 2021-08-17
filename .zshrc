@@ -98,6 +98,19 @@ unset file;
 export HISTCONTROL='ignoreboth:erasedups'
 export HISTIGNORE="&:ls:cd:mkdir:cat:mv:cp:rm:exit:pwd:touch:clear:g* checkout:g* branch:source:history:[ \t]*"
 
+setopt HIST_IGNORE_SPACE
+setopt HIST_NO_STORE
+setopt HIST_NO_FUNCTIONS
+
+# use .zsh_history from Google Drive
+SOURCE_FILE=~/Google\ Drive/Settings/.zsh_history
+
+if [[ -f "$SOURCE_FILE" ]]; then
+    export HISTFILE=$SOURCE_FILE
+else
+  echo "History file does not exist: $SOURCE_FILE"
+fi
+
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
 # Allow call rake with arguments
