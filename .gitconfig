@@ -77,6 +77,12 @@
 		fi \
 	}; f"
 
+  # Pull from upstream then update origin
+  uo = "!f() { \
+    declare currentBranch=\"$(git symbolic-ref --short HEAD)\"; \
+    git pull upstream $currentBranch && git push origin $currentBranch; \
+  }; f"
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
