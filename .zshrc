@@ -114,3 +114,7 @@ export AWS_PAGER=""
 function toggletime() {
   export DRACULA_DISPLAY_TIME=$((DRACULA_DISPLAY_TIME * -1))
 }
+
+function toggleusercontext() {
+  export DRACULA_DISPLAY_CONTEXT=$((DRACULA_DISPLAY_CONTEXT * -1))
+}
