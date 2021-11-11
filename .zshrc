@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="toshio"
+ZSH_THEME="dracula"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -58,10 +58,6 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
 
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -95,9 +91,6 @@ for file in ~/.{path,exports,aliases,functions,extra}; do
 done;
 unset file;
 
-export HISTCONTROL='ignoreboth:erasedups'
-export HISTIGNORE="&:ls:cd:mkdir:cat:mv:cp:rm:exit:pwd:touch:clear:g* checkout:g* branch:source:history:[ \t]*"
-
 setopt HIST_IGNORE_SPACE
 setopt HIST_NO_STORE
 setopt HIST_NO_FUNCTIONS
@@ -117,3 +110,7 @@ fi
 unsetopt nomatch
 
 export AWS_PAGER=""
+
+function toggletime() {
+  export DRACULA_DISPLAY_TIME=$((DRACULA_DISPLAY_TIME * -1))
+}

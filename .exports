@@ -17,7 +17,8 @@ export PYTHONIOENCODING='UTF-8';
 export HISTSIZE='32768';
 export HISTFILESIZE="${HISTSIZE}";
 # Omit duplicates and commands that begin with a space from history.
-export HISTCONTROL='ignoreboth';
+export HISTCONTROL='ignoreboth:erasedups';
+export HISTIGNORE="&:ls:cd:mkdir:cat:mv:cp:rm:exit:pwd:touch:clear:g* checkout:g* branch:source:history:[ \t]*";
 
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8';
