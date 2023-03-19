@@ -90,6 +90,8 @@
 
 [core]
 
+	editor = code --wait
+
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
@@ -137,6 +139,11 @@
 	# Detect copies as well as renames
 	renames = copies
 
+	tool = vscode
+
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+
 [diff "bin"]
 
 	# Use `hexdump` to diff binary files
@@ -151,10 +158,10 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
-	tool = kdiff3
+	tool = vscode
 
-[mergetool "kdiff3"]
-	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
 
 [push]
 
@@ -188,5 +195,7 @@
 	insteadOf = "gist:"
 
 [user]
-  email = marcio@tosh.io
+	email = marcio@tosh.io
   name = Marcio Toshio
+[pager]
+	branch = false
