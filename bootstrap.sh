@@ -23,7 +23,6 @@ function doIt() {
   fi;
 
   rsync --exclude ".git/" \
-    --exclude "init/" \
     --exclude "sh/" \
     --exclude ".DS_Store" \
     --exclude ".osx" \

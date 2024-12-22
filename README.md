@@ -51,12 +51,6 @@ When setting up a new Mac, you may want to install some common [Homebrew](http:/
 ./sh/brew.sh
 ```
 
-### Install Homebrew Cask formulae
-
-```bash
-./sh/brew-cask.sh
-```
-
 ## Thanks to…
 
 * [Mathias Bynens](https://mathiasbynens.be/) for the start
