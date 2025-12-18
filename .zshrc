@@ -118,7 +118,3 @@ function toggletime() {
 function toggleusercontext() {
   export DRACULA_DISPLAY_CONTEXT=$((DRACULA_DISPLAY_CONTEXT * -1))
 }
-
-function togglervm() {
-  export DRACULA_DISPLAY_RVM=$((DRACULA_DISPLAY_RVM * -1))
-}

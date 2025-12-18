@@ -7,19 +7,32 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin main;
 
 function doIt() {
-  if [ -d ~/.rvm ]; then
-    echo "RVM installed"
+  if [ -d /home/linuxbrew/.linuxbrew || /opt/homebrew ]; then
+    echo "Homebrew installed"
   else
-      echo "Installing RVM"
-      gpg --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-      \curl -sSL https://get.rvm.io | bash
+    echo "Installing Homebrew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi;
+
+  if [ -f ~/.zshrc ]; then
+    echo "zsh installed"
+  else
+      echo "Installing zsh"
+      brew install zsh
   fi;
 
   if [ -d ~/.oh-my-zsh ]; then
       echo "Oh My Zsh installed"
   else
       echo "Installing Oh My Zsh"
-      sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      /bin/bash -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  fi;
+
+  if [ -d ~/.rbenv ]; then
+    echo "rbenv installed"
+  else
+      echo "Installing rbenv"
+      brew install rbenv
   fi;
 
   rsync --exclude ".git/" \
