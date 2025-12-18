@@ -100,8 +100,6 @@ SOURCE_FILE=~/Google\ Drive/Settings/.zsh_history
 
 if [[ -f "$SOURCE_FILE" ]]; then
     export HISTFILE=$SOURCE_FILE
-else
-  echo "History file does not exist: $SOURCE_FILE"
 fi
 
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
