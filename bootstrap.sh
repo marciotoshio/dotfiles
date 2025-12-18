@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 set -e
 
@@ -7,11 +7,14 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin main;
 
 function doIt() {
-  if [ -d /home/linuxbrew/.linuxbrew || /opt/homebrew ]; then
+  if [ -d /home/linuxbrew/.linuxbrew ] || [ -d /opt/homebrew ]; then
     echo "Homebrew installed"
   else
     echo "Installing Homebrew"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo >> ~/.bashrc
+    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   fi;
 
   if [ -f ~/.zshrc ]; then
@@ -49,7 +52,7 @@ function doIt() {
 if [ "$1" = "--force" -o "$1" = "-f" ]; then
   doIt;
 else
-  read "REPLY?This may overwrite existing files in your home directory. Are you sure? (y/n) "
+  read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1 -r
   echo "";
   if [[ $REPLY =~ ^[Yy]$ ]]; then
     doIt;
