@@ -35,7 +35,7 @@ function doIt() {
       /bin/bash -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   fi;
 
-  if [ brew --prefix rbenv &>/dev/null; ]; then
+  if [ brew --prefix rbenv &>/dev/null ]; then
     echo "rbenv installed"
   else
       echo "Installing rbenv"
